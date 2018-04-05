@@ -36,7 +36,7 @@ Route::get('/user',function() {
         'password' => bcrypt('1234')
     ];
     $user = \App\User::insert($data);
-    dd($user);
+    dd($user); 
  });
 
 
