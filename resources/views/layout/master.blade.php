@@ -7,8 +7,9 @@
     <title>@yield('title')</title>
 </head>
 <body>
+    <div><img src="/assets/images/cmru-logo-min.png" alt=""></div>
    <div> 
-        <a href="/">HOME</a> | <a href="/computer">COMPUTER</a> | <a href="/about">ABOUT</a>
+        <a href="/">HOME</a> | <a href="/computer">COMPUTER</a> | <a href="/about">ABOUT</a> | <a href="/login">Log In</a>
    </div>
    <div>
         @yield('content')

@@ -13,13 +13,13 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/about', 'HomeController@about');
-route::get('/cal/{num1},{num2}','HomeController@cal');
+Route::get('/cal/{num1},{num2}','HomeController@cal');
 
-// Route::get('/about', function () {
-//     return view('about');
-// });
+Route::group(['prefix'=>'admin'], function(){
+    Route::get('/', 'admin\BackendController@index');
+});
 
- Route::get('/computer', function () {
+Route::get('/computer', function () {
      return view('computer');
  });
 
@@ -29,7 +29,7 @@ Route::get('/user',function() {
 
 });
 
-  Route::get('/user/add-example',function () {
+Route::get('/user/add-example',function () {
     $data = [
         'name' => 'manop kumm',
         'email' => 'namop@hotmail.com',
@@ -40,3 +40,6 @@ Route::get('/user',function() {
  });
 
 
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
